@@ -1,0 +1,28 @@
+---
+tags: parents
+order: 5
+layout: base.html
+title: Notes
+description: Journals for things I've been learning.
+css: notes.css
+---
+
+<header class="px-4 pt-4 lg:px-0">
+  <h1 class="text-2xl font-bold">NOTES</h1>
+  <p>{{ description }}</p>
+</header>
+
+<section class="px-4 pt-4 lg:px-0 grid grid-cols-1 sm:grid-cols-3 gap-4">
+  {%- for note in collections.notes -%}
+  <a href="{{ note.url }}" class="p-2 rounded bg-gray-50 border border-gray-200 h-full hover:border-gray-400">
+    <section class="grid grid-cols-[25%_1fr] gap-4">
+      <img src="{{ note.data.icon }}" alt="{{ note.data.title }}">
+      <div class="text-xs">
+        <h4 class="text-xl font-bold">{{ note.data.title }}</h4>
+        <p>{{ collections[note.data.tagID].length | minusOne }} note(s) written.</p>
+        <p class="text-stone-500">Last Updated: {{ note.lastUpdatedDate | formatDate }}</p>
+      </div>
+    </section>
+  </a>
+  {%- endfor -%}
+</section>
