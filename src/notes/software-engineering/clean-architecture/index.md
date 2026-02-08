@@ -64,3 +64,25 @@ description: "Clean Architecture Summaries"
 
 - If depending on concrete objects, make sure those objects are stable and not volatile to 
   changes.
+
+# Part 5: Architecture
+
+## Chapter 15: What is Architecture?
+
+- Good architecture makes the system easy to understand, develop, maintain, and to deploy.
+
+- The ultimate goal is to minimize the lifetime cost of the system and to maximize 
+  productivity.
+
+- The way to keep software _soft_ is to leave as many options open as possible, for as long 
+  as possible.
+
+  - The options that need to be left open are the details that don't matter.
+
+- All software systems can be decomposed into two major elements: policy and details.
+
+  - Policy are business rules and procedures.
+
+  - Details are those necessary to enable humans, other systems, and programmers to 
+    communicate with the policy, but that do not impact the behaviour of the policy at 
+    all.
