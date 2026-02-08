@@ -86,3 +86,26 @@ description: "Clean Architecture Summaries"
   - Details are those necessary to enable humans, other systems, and programmers to 
     communicate with the policy, but that do not impact the behaviour of the policy at 
     all.
+
+## Chapter 17: Boundaries
+
+- Business rules must not know about their technical details to make the architecture 
+  flexible.
+
+## Chapter 20: Business Rules
+
+- An _Entity_ is an object that embodies a small set of critical business rules that 
+  operate on critical business data.
+
+- The interface of the Entity consists of the functions that implement the critical 
+  business rules that operate on that data.
+
+- A _use case_ specifies the input to be provided by the user, the output to be returned 
+  to the user, and the processing steps involved in producing that output.
+  
+  - A use case describes _application-specific_ business rules.
+
+  - Use cases contain the rules that specify how and when the critical business rules 
+    within the Entities are invoked.
+
+  - Entities have no knowledge of the use cases that control them.
