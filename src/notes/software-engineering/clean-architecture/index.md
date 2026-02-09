@@ -109,3 +109,48 @@ description: "Clean Architecture Summaries"
     within the Entities are invoked.
 
   - Entities have no knowledge of the use cases that control them.
+
+## Chapter 21: Screaming Architecture
+
+- The architecture of the system should tell its readers about the system ie. a health 
+  care app should be easily distinguishable as a health care app based on its source 
+  repository.
+
+- Good architecture should focus on use cases and not on the technical details.
+
+## Chapter 22: The Clean Architecture
+
+![Clean Architecture Diagram](/images/figures/software-engineering/clean-architecture-diagram.jpg)
+
+- The _Dependency Rule_ in Clean Architecture states that source code dependencies must 
+  point only inward, toward higher-level policies.
+
+- _Entities_ are objects that encapsulate critical business rules.
+
+- _Use Cases_ contains _application-specific_ business rules and control the flow of 
+  data to and from the entities.
+
+- _Interface Adapters_ are a set of adapters that convert data from the format most 
+  convenient for the use cases and entities to the format most convenient for some 
+  external details such as the database or the web.
+
+- _Frameworks and Drivers_ are where all the details go (ie. web, database, frameworks, i/o)
+
+## Chapter 23: Presenters and Humble Objects
+
+- The _Humble Object_ pattern is a design pattern where the behaviour is split into two 
+  modules or classes. One of those modules is _humble_; it contains all the hard-to-test 
+  behaviours. The other module contains all the testable behaviours that were stripped 
+  out of the humble object.
+
+  - The View is the humble object that is hard to test.
+  - The Presenter is the testable object.
+
+- The job of the Presenter is to accept data from the application and format it for 
+  presentation so that the View can simply move it to the screen.
+
+  - The View Model is a simple data structure that the Presenter uses to fill in details 
+    with so that the View can find it.
+
+> View [this](https://www.youtube.com/watch?v=3O_rpTWdGps) video for an example usage.
+> TL;DR Humble Object = An instance of DIP.
