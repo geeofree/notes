@@ -33,7 +33,7 @@ the ff. conditions:
 
 1. Normal exit (voluntary)
 2. Error exit (voluntary)
-3. Fata error (involuntary)
+3. Fatal error (involuntary)
 4. Killed by another process (involuntary)
 
 In UNIX, the `exit` system call is used to tell the Operating System that the process is 
@@ -45,7 +45,7 @@ There is also the `kill` system call in UNIX that terminates another process.
 In UNIX, when the computer is booted, a special process called **init** is present in the 
 boot image.
 
-When it starts running, it reads a file telling it how many terminals there. Then it forks 
+When it starts running, it reads a file telling it how many terminals there are. Then it forks 
 off a new process per terminal.
 
 These processes wait for someone to login, and, if successful, the login process executes 
@@ -247,6 +247,13 @@ and allowed to acquire the lock.
 
 > A mutex can be easily implemented in user space provided that machine-level instructions 
 > for locks (ie. `TSL` or `XCHG`) are available.
+
+> **Semaphores** vs **Mutexes**: Mutexes are exclusive to a single process/thread where the 
+> critical resource is locked/unlocked by the same thread. A mutex is only limited for 
+> ATOMICITY.
+>
+> Semaphores on the other hand are for signaling which can be used for ATOMICITY and 
+> SYNCHRONIZATION between two or more processes/threads.
 
 #### Monitors
 A **monitor** is a collection of procedures, variables, and data structures that are all 
