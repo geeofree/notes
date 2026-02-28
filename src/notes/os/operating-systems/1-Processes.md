@@ -255,6 +255,14 @@ and allowed to acquire the lock.
 > Semaphores on the other hand are for signaling which can be used for ATOMICITY and 
 > SYNCHRONIZATION between two or more processes/threads.
 
+#### Barriers
+
+Some applications are divided into phases and have the rule that no process may proceed 
+into the next phase until all processes are ready to proceed to the next phase.
+
+A **barrier** blocks processes that reach it and only lets the process move onto their next 
+phase once all processes reach it.
+
 #### Monitors
 A **monitor** is a collection of procedures, variables, and data structures that are all 
 grouped together in a special kind of module or package.
