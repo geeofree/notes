@@ -1,5 +1,5 @@
 ---
-title: "Chapter 3: Asynchronous Messaging"
+title: "Chapter 6: Asynchronous Messaging"
 description: "Asynchronous messaging basics."
 ---
 
