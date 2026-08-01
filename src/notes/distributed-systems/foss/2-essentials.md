@@ -20,6 +20,15 @@ See this medium post: [Modes of Failures](https://medium.com/baseds/modes-of-fai
 Are operations that can be applied multiple times without changing the result beyond 
 the initial application.
 
+### Consensus in Distributed Systems
+
+Consensus in a Distributed System is an impossible problem because both nodes in a 
+network have to reach an aggreement within an unreliable communication environment.
+
+> See:
+> - [Two Generals Problem](https://www.youtube.com/watch?v=MDuWnzVnfpI)
+> - [The Byzantine Generals Problem](https://www.youtube.com/watch?v=LoGx_ldRBU0)
+
 # Load Balancing
 
 Load balancers are network resources that distributes requests across available services.
