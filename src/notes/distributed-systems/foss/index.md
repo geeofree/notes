@@ -10,3 +10,4 @@ description: "Foundations of Scalable Systems Notes"
 - [Chapter 4: Application Services](4-applicationServices)
 - [Chapter 5: Distributed Caching](5-distributedCaching)
 - [Chapter 6: Asynchronous Messaging](6-asyncMessaging)
+- [Chapter 7: Microservices](7-microservices)
