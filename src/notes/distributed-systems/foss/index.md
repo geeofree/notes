@@ -11,3 +11,4 @@ description: "Foundations of Scalable Systems Notes"
 - [Chapter 5: Distributed Caching](5-distributedCaching)
 - [Chapter 6: Asynchronous Messaging](6-asyncMessaging)
 - [Chapter 7: Microservices](7-microservices)
+- [Chapter 8: Scalable Database Fundamentals](8-scalableDatabaseFundamentals)
