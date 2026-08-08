@@ -569,7 +569,7 @@ $$
 a^{-1}a = aa^{-1} = 1
 $$
 
-Indeed, if $a = \frac{m}{n}$ where $m, n$ are integers and $n \neq 0$, then $a^{-1} - \frac{n}{m}$ 
+Indeed, if $a = \frac{m}{n}$ where $m, n$ are integers and $n \neq 0$, then $a^{-1} = \frac{n}{m}$ 
 because:
 
 $$
