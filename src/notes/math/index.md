@@ -5,9 +5,7 @@ title: Mathematics
 description: Notes on Mathematics topics.
 ---
 
-## Basic Mathematics
+# Basic Mathematics
 
-### Table of Contents
-
-#### Part One: Algebra
 - [Chapter 1: Numbers](basic-math/1-Numbers)
+- [Chapter 2: Linear Equations](basic-math/2-LinearEquations)
