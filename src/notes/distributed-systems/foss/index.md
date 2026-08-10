@@ -12,3 +12,4 @@ description: "Foundations of Scalable Systems Notes"
 - [Chapter 6: Asynchronous Messaging](6-asyncMessaging)
 - [Chapter 7: Microservices](7-microservices)
 - [Chapter 8: Scalable Database Fundamentals](8-scalableDatabaseFundamentals)
+- [Chapter 9: Eventual Consistency](9-eventualConsistency)
