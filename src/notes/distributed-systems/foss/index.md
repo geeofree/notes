@@ -13,3 +13,4 @@ description: "Foundations of Scalable Systems Notes"
 - [Chapter 7: Microservices](7-microservices)
 - [Chapter 8: Scalable Database Fundamentals](8-scalableDatabaseFundamentals)
 - [Chapter 9: Eventual Consistency](9-eventualConsistency)
+- [Chapter 10: Strong Consistency](10-strongConsistency)
