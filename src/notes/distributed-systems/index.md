@@ -6,3 +6,4 @@ description: "Notes for Distributed Systems"
 ---
 
 - [Foundations of Scalable Systems](foss)
+- [Rabbit MQ](rabbit-mq)
