@@ -6,3 +6,4 @@ description: "Learning Go"
 **Table of Contents**
 
 - [Chapter 1: Basics](1-Basics)
+- [Chapter 2: Control Flow](2-ControlFlow)
