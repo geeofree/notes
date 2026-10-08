@@ -7,3 +7,4 @@ description: "Notes for Programming Languages I'm learning."
 
 - [The C Language](c)
 - [Python](python)
+- [Golang](golang)
