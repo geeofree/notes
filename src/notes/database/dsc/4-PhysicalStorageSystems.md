@@ -1,6 +1,6 @@
 ---
 title: "Chapter 4: Physical Storage Systems"
-description: "Physicaly storage devices, interfaces, and block storage access."
+description: "Physical storage devices, interfaces, and block storage access."
 ---
 
 ## Physical Storage Devices
@@ -134,3 +134,38 @@ random access means that blocks are accessed at different tracks.
 
 The number of **I/O operations per second** (IOPS) is the number of random block accesses 
 that can be done by a disk in a second.
+
+## Flash Memory
+
+Flash memory is a type of non-volatile electronic computer storage medium.
+
+There are two types of flash memory: NOR flash and NAND flash. With the latter being 
+the most predominant.
+
+Solid-state disks (SSDs) are built using NAND flash and provide the same block-oriented 
+interface as disk storage.
+
+Compared to magnetic disks, SSDs can provide much faster random access: the latency to 
+retrieve a page of data ranges from 20 to 100 microseconds whereas a random access on 
+disk would take 5 to 10 milliseconds.
+
+Data transfer rates are also much higher for SSDs than that of magnetic disks.
+
+A written page of flash memory cannot be directly overwritten, instead it has to be 
+erased and rewritten subsequently and must be performed on a group of pages called an 
+_erase block_ which erases all the pages in the block.
+
+Flash memory systems limit the impact of both the slow erase speed and the update limits 
+by mapping logical page numbers to physical page numbers. When a logical page is updated, 
+it can be remapped to any already erased physical page, and the original location can be 
+erased later.
+
+Each physical page has a small area of memory where its logical address is stored; if the 
+logical address is remapped to a different physical page, the original physical page is 
+marked as deleted. Thus, by scanning the physical pages we can find where each logical 
+page resides.
+
+The logical-to-physical page mapping is replicated in an in-memory translation table for 
+quick access.
+
+> Learn more [here](https://www.youtube.com/watch?v=r2KaVfSH884) and [here](https://www.youtube.com/watch?v=5Mh3o886qpg)
