@@ -169,3 +169,37 @@ The logical-to-physical page mapping is replicated in an in-memory translation t
 quick access.
 
 > Learn more [here](https://www.youtube.com/watch?v=r2KaVfSH884) and [here](https://www.youtube.com/watch?v=5Mh3o886qpg)
+
+## RAID
+
+A storage technology that combines multiple physical hard drives or solid-state drives 
+(SSDs) into a single logical unit.
+
+RAID improves reliability by introducing _redundancy_.
+
+RAID also improves performance via _parallelism_.
+
+> Learn more [here](https://www.youtube.com/watch?v=U-OCdTeZLac&t) and [here](https://www.youtube.com/watch?v=v3UPDMox8xI).
+
+## Disk-Block Access
+
+A number of techniques have been developed for improving the speed of access to blocks 
+by minimizing the number of accesses, and in particular minimizing the number of random 
+accesses.
+
+- **Buffering**: Blocks that are read from disk are stored temporarily in an in-memory 
+  buffer, to satisfy future requests.
+  
+- **Read-ahead**: When a disk block is accessed, consecutive blocks from the same track are 
+  read into an in-memory buffer even if there are no pending requests for the blocks.
+  
+  This reduces disk seeks by placing many blocks in-memory with one read.
+
+- **File Organization**: To reduce block-access time, we can organize blocks on disk in a 
+  manner that resembles closely to the way we expect data to be accessed ie. if a file is 
+  expected to be requested sequentlly then we should ideally keep the blocks of the file 
+  sequentlly on adjacent cylinders.
+
+- **Non-volatile write buffers**: Non-voltile random-access memory (NVRAM) is a computer 
+  memory that keeps its data even after the power turns off and can be used as a 
+  non-voltile write buffer.
