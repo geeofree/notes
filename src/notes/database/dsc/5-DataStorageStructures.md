@@ -51,3 +51,36 @@ The block header commonly contains the ff. information:
 - An array containing the offset and length of each record
 
 ![slotted-page-structure](/images/figures/database/slotted-page-structure.png)
+
+## Organization of Records in Files
+
+### Heap File Organization
+
+A basic type of file organization where records are stored in no particular order and 
+where data is inserted at the end of the file (append only).
+
+Deleting a file causes a fragmentation in this type of file organization which is why a 
+data structure called a _free space map_ is used to improve insertion and delete 
+operations.
+
+### Sequential File Organization
+
+A type of file organization where records are stored in sorted order based on some 
+search-key.
+
+This type of file organization is suited for efficient access of sorted records.
+
+> A _search-key_ is some attributed or a set of attributes.
+
+The read operation works by chaining together records by pointers (linked list), where 
+each record points to the next record in search0key order.
+
+The records are also stored search-key order physically in order to minimize the number 
+of block access.
+
+### Multitable Clustering File Organization
+
+A type of file organization that stores related records of two or more relations in each 
+block.
+
+The _cluster key_ is the attribute that defines which records are stored together.
