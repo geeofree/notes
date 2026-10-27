@@ -84,3 +84,39 @@ A type of file organization that stores related records of two or more relations
 block.
 
 The _cluster key_ is the attribute that defines which records are stored together.
+
+## Data-Dictionary Storage
+
+Relational schemas and other metadata are stored in a structure called a _data dictionary_ 
+or _system catalog_.
+
+The ff. are some of the types of information that gets stored in a data dictionary:
+
+- Names of relations
+- Names of the attributes of each relation
+- Domains and lengths of attributes
+- Names of views defined on the database, and definitions of those views
+- Integrity constraints
+
+In addition, many systems keep the ff. data on users of the system:
+
+- Name of users, the default schemas of the users, and passwords or other information to 
+  authenticate users.
+- Information about authorizations for each user.
+
+Further, the database may store statistical and descriptive data about the relations and 
+attributes, such as the number of tuples in each relation, or the number of distinct values 
+for each attribute.
+
+The data dictionary or system catalog may also note the storage organization (heap, sequential, 
+hash, etc.) of relations, and the location of where each relation is stored:
+
+- If relations are stored in OS files, the dictionary would note the names of the file/s 
+  containing each relation.
+- If the databases stores all relations in a single file, the dictionary may note the 
+  blocks containing records of each relation in a data structure such as a linked list.
+
+Some databases store metadata by using special-purpose data structures.
+
+In general however, it is preferable to store the data about the database as relations in 
+the database itself.
