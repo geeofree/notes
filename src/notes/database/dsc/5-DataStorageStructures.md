@@ -120,3 +120,52 @@ Some databases store metadata by using special-purpose data structures.
 
 In general however, it is preferable to store the data about the database as relations in 
 the database itself.
+
+## Database Buffer
+
+The database buffer is a region of RAM that the DBMS uses to temporarily store blocks that 
+have been read on disk.
+
+### Buffer Manager
+
+Programs in a DBMS makes requests to the _buffer manager_ when they need a block from disk.
+
+If the block is already in memory, then the buffer manager provides the address of the 
+block in main memory to the requester.
+
+Otherwise, if the block is not in memory, then the buffer manager has to request it from 
+disk, allocating space, or throwing out some other block to make space for the new block.
+
+The thrown-out block is only written back to the disk if it has been modified.
+
+#### Buffer Replacement Strategy
+
+When there is no more space left in the buffer, a block must be _evicted_ or removed from 
+the buffer before a new one can be read in.
+
+Most operating systems use a _least recently used (LRU)_ strategy in which the block that 
+was referenced the least is written back to disk and is removed from the buffer.
+
+> For more buffer replacement strategies: see [here](https://en.wikipedia.org/wiki/Cache_replacement_policies).
+
+#### Pinned Blocks
+
+It is important for blocks to be _pinned_ whenever they are in a process of execution.
+
+A process must execute a **pin** operation in order for a block to not get evicted while it 
+is being operated on and consequently should execute an **unpin** operation once finished 
+so that the block can be evicted.
+
+This can be done by providing a **pin counter** to a block where a process increments a 
+block's pin counter whenever it accesses it and decrements the counter whenever it 
+finishes. Only a block with a pin counter of $0$ may be evicted.
+
+#### Shared and Exclusive Locks on Buffer
+
+Shared and exclusive locks on a block in the buffer are provided by the DBMS buffer 
+manager to control concurrency.
+
+- Any number of database processes may have a shared lock on a block at the same time.
+- Only one process is allowed to get an exclusive lock at a time and also: no other 
+  process may have a shared lock on that block as well eg. a block with an exclusive lock 
+  must only have that exclusive lock with it until it is released.
