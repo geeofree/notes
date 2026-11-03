@@ -169,3 +169,12 @@ manager to control concurrency.
 - Only one process is allowed to get an exclusive lock at a time and also: no other 
   process may have a shared lock on that block as well eg. a block with an exclusive lock 
   must only have that exclusive lock with it until it is released.
+
+## Column-Oriented Storage
+
+Is a storage layout where each attribute is stored separately and its values are stored 
+on the same tuple (as opposed to row-oriented storage where each tuple stores the values 
+of each attribute in a sequential order).
+
+This type of storage layout is mostly used for analytics or data analysis as this practice 
+most commonly fetches a few attributes at a time.
