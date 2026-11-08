@@ -60,3 +60,8 @@ There are two types of ordered indices we can use:
 
 Indices with two or more levels are called multilevel indices and are used to reduce 
 space-overhead with index files.
+
+## Secondary Indices
+
+Secondary indices are an auxiliary data structure created on a non-primary key and is used 
+to improve read performance.
